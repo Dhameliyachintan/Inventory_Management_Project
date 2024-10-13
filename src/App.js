@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import InventoryForm from './component/InventoryForm';
+import Navbar from './component/Navbar';
+import InventoryDashboard from './component/InventoryDashboard';
+import Home from './Dashboard/Home';
+import EditInventoryForm from './component/EditInventoryForm';
+import SupplierInformation from './component/SupplierInformation';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/inventoryForm" element={<InventoryForm />} />
+        <Route path="/inventoryDashboard" element={<InventoryDashboard />} />
+        <Route path="/supplierinformation" element={<SupplierInformation />} />
+        <Route path="/editInventoryForm/:index" element={<EditInventoryForm />} /> 
+      </Routes>
     </div>
   );
 }
