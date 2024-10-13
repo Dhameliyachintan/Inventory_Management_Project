@@ -1,4 +1,4 @@
-# Inventory Management System
+# Inventory Management project
 
 ## Overview
 The Inventory Management System is a user-friendly web application that streamlines inventory management. Built with React.js for the front end and styled using Tailwind CSS, this application allows users to manage inventory items efficiently. Data is securely stored in localStorage, ensuring persistence across browser sessions.
